@@ -1,0 +1,37 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'portfolio_making/style.css' %}">
+<link rel="stylesheet" href="{% static 'portfolio_making/bootstrap.min.css' %}">
+</div> 
+
+<h1>speciale utilisateur</h1>
+
+<div class="contu">
+ 
+ 
+ <table class="table table-bordered" border="5" style="background-color: blue;">
+    <thead>
+      <tr> 
+        <th>numeros</th>
+        <th>name</th>
+        <th>Email</th>
+       
+      </tr>
+    </thead>
+    {% for reserve in reserve %}
+    <tbody>
+      <tr>
+         <td>{{reserve.id}}</td>
+        <td>{{ reserve.username }}</td>
+     
+        <td><div class="texte">
+            <h5>{{reserve.email}}</h5>
+          </div>
+        </td>
+      </tr>
+    </tbody> {% endfor %}
+  </table>
+    
+ </div>
+
+</div>
